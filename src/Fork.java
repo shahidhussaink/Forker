@@ -14,6 +14,8 @@ import java.util.List;
  */
 public class Fork {
 
+    static { System.setProperty("https.protocols", "TLSv1.2,TLSv1.1,TLSv1"); }
+
     private static List<String> parseFile(String fileName) throws IOException {
         ArrayList<String> repoList = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
